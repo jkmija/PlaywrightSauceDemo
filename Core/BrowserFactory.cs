@@ -10,7 +10,7 @@ namespace PlaywrightDemo.Core
 
             return browserType switch
             {
-                "Chromium" => await playwright.Chromium.LaunchAsync(new() { Headless = headless }),
+                "Chrome" => await playwright.Chromium.LaunchAsync(new() { Headless = headless }),
                 "Firefox" => await playwright.Firefox.LaunchAsync(new() { Headless = headless }),
                 "Webkit" => await playwright.Webkit.LaunchAsync(new() { Headless = headless }),
                 _ => throw new ArgumentException("Unsupported browser type.")
